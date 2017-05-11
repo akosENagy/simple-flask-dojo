@@ -17,6 +17,10 @@ def req_counter():
     return redirect(url_for('route'))
 
 
+@app.route('/statistics')
+def statistics():
+    return render_template('statistics.html', counts=counts)
+
 def main():
     app.run(debug=True)
 
